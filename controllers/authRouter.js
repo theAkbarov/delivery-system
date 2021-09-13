@@ -64,22 +64,6 @@ router.post(
         .status(404)
         .json({ message: `User with: ${email} is not found!` });
     }
-    const ProtonMail = require('protonmail-api');
-
-(async () => {
-  const pm = await ProtonMail.connect({
-    username: 'foobar@protonmail.com',
-    password: 'somethingsecure'
-  })
-
-  await pm.sendEmail({
-    to: 'justin@kalland.ch',
-    subject: 'Send email tutorial',
-    body: 'Hello world'
-  })
-
-  pm.close()
-})()
     res.status(200).json({ email: "New password sent to your email address" });
   })
 );
