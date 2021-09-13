@@ -1,7 +1,7 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const _ = require("lodash");
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt-nodejs");
 const { asyncWrapper } = require("../utils/errorHandler");
 const { authMiddleware } = require("../middleware/authMidlleware");
 const { User } = require("../models/User");
